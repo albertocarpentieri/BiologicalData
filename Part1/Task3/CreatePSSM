@@ -1,0 +1,4 @@
+
+# Create PSSM model starting from the MSA
+
+psiblast -subject psiblast_u90.fasta -in_msa msa_cut_u90.fa -out_pssm data/pssm_u90.pssm
