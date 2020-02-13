@@ -1,0 +1,3 @@
+# Create HMM model starting from the MSA using HMMER
+
+hmmbuild hmm_u90.hmm msa_cut_u90.fa
