@@ -61,11 +61,16 @@ script: 					output:
 
 B)Annotation enrichment
 
-GO tree terms used in code:
+1)GO tree terms used in code:
 http://geneontology.org/docs/ontology-relations/
 
 
-Python code: https://github.com/albertocarpentieri/BiologicalData/blob/master/Part2/GO/go_enrichment%2Bmining%2Bcloud.ipynb
+#Python code: https://github.com/albertocarpentieri/BiologicalData/blob/master/Part2/GO/go_enrichment%2Bmining%2Bcloud.ipynb
+
+2)DO tasks
+Mining DO terms from those articles (abstracts) associated with dataset proteins in EuropePMC.
+python code: Association EuropePMC and DOids.ipynb
+Output: uniprot_do.json
 
 
 C) Structural classification
@@ -79,7 +84,13 @@ No of domains in this family:878
 Unique Species:15649
 Unique GO terms: 1685
 
+downloaded PDB files and calculated:
+a) pairwise structural alignment
+b)distance matrix
+c)dendogram
 
+Python code:
+Output:
 
 
 TMAlign: https://anaconda.org/speleo3/tmalign/files
