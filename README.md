@@ -65,7 +65,7 @@ GO tree terms used in code:
 http://geneontology.org/docs/ontology-relations/
 
 
-Python code:
+Python code: https://github.com/albertocarpentieri/BiologicalData/blob/master/Part2/GO/go_enrichment%2Bmining%2Bcloud.ipynb
 
 
 C) Structural classification
