@@ -68,7 +68,9 @@ http://geneontology.org/docs/ontology-relations/
 #Python code: https://github.com/albertocarpentieri/BiologicalData/blob/master/Part2/GO/go_enrichment%2Bmining%2Bcloud.ipynb
 
 2)DO tasks
+
 Mining DO terms from those articles (abstracts) associated with dataset proteins in EuropePMC.
+
 python code: Association EuropePMC and DOids.ipynb
 Output: uniprot_do.json
 
