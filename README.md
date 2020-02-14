@@ -91,8 +91,8 @@ a) pairwise structural alignment
 b)distance matrix
 c)dendogram
 
-Python code:
-Output:
+Python code:  TMalign.ipynb 
+Output: in the python file
 
 
 TMAlign: https://anaconda.org/speleo3/tmalign/files
