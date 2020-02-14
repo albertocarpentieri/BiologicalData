@@ -1,0 +1,57 @@
+{
+  "ontologyId" : "doid",
+  "loaded" : "2020-02-05T05:30:43.518+0000",
+  "updated" : "2020-02-14T01:51:32.972+0000",
+  "status" : "LOADED",
+  "message" : "",
+  "version" : null,
+  "numberOfTerms" : 18491,
+  "numberOfProperties" : 85,
+  "numberOfIndividuals" : 0,
+  "config" : {
+    "id" : "http://purl.obolibrary.org/obo/doid.owl",
+    "versionIri" : "http://purl.obolibrary.org/obo/doid/releases/2020-02-04/doid.owl",
+    "title" : "Human Disease Ontology",
+    "namespace" : "doid",
+    "preferredPrefix" : "DOID",
+    "description" : "The Disease Ontology has been developed as a standardized ontology for human disease with the purpose of providing the biomedical community with consistent, reusable and sustainable descriptions of human disease terms, phenotype characteristics and related medical vocabulary disease concepts.",
+    "homepage" : "http://www.disease-ontology.org",
+    "version" : "2020-02-04",
+    "mailingList" : null,
+    "creators" : [ ],
+    "annotations" : {
+      "date" : [ "04:02:2020 15:07" ],
+      "license" : [ "" ],
+      "saved-by" : [ "lschriml" ],
+      "default-namespace" : [ "disease_ontology" ],
+      "has_obo_format_version" : [ "1.2" ],
+      "comment" : [ "The Disease Ontology content is available via the Creative Commons Public Domain Dedication CC0 1.0 Universal license (https://creativecommons.org/publicdomain/zero/1.0/)." ]
+    },
+    "fileLocation" : "http://purl.obolibrary.org/obo/doid.owl",
+    "reasonerType" : "EL",
+    "oboSlims" : true,
+    "labelProperty" : "http://www.w3.org/2000/01/rdf-schema#label",
+    "definitionProperties" : [ "http://purl.obolibrary.org/obo/IAO_0000115" ],
+    "synonymProperties" : [ "http://www.geneontology.org/formats/oboInOwl#hasExactSynonym" ],
+    "hierarchicalProperties" : [ "http://purl.obolibrary.org/obo/BFO_0000050" ],
+    "baseUris" : [ "http://purl.obolibrary.org/obo/DOID_" ],
+    "hiddenProperties" : [ ],
+    "preferredRootTerms" : [ ],
+    "internalMetadataProperties" : [ "http://purl.org/dc/elements/1.1/title", "http://purl.org/dc/elements/1.1/description" ],
+    "skos" : false
+  },
+  "_links" : {
+    "self" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/doid"
+    },
+    "terms" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/doid/terms"
+    },
+    "properties" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/doid/properties"
+    },
+    "individuals" : {
+      "href" : "https://www.ebi.ac.uk/ols/api/ontologies/doid/individuals"
+    }
+  }
+}
