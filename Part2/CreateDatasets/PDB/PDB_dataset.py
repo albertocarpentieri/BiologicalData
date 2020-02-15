@@ -6,7 +6,7 @@ import pandas as pd
 
 URL = "https://www.uniprot.org"
 
-# Set of original proteins
+# Retrieve the set of original proteins (found by HMM model)
 hmm = open("hmm_search_out.hmmer_align", "r")
 original_proteins = ""
 for line in hmm:
@@ -14,7 +14,7 @@ for line in hmm:
         original_proteins+=' '+(line[6:12])
 
 
-# Mapping Uniprot id to PDB id
+# Mapping Uniprot IDs to PDB IDs
 r = requests.get("{}/uploadlists/".format(URL), params={'from': 'ACC', 'to': 'PDB_ID', 'format': 'tab', 'query': original_proteins})
 print(r.status_code)
 mapping = set()
@@ -23,7 +23,7 @@ for ele in r.text.split("\n")[1:-1]:
     mapping.add(pdb_id)
 
 
-# Creating list of human SwissProt proteins id
+# Creating list of IDs of human proteins from SwissProt
 fasta_sequences = SeqIO.parse(open('uniprot-reviewed_Homo_sapiens.fasta'),'fasta')
 annotated_humans = []
 for fasta in fasta_sequences:
@@ -32,7 +32,7 @@ for fasta in fasta_sequences:
     annotated_humans.append(proteins)
 
 
-# Create a dictionary with all human proteins in PDB
+# Creating a dictionary with all human proteins in PDB
 pdb_human=pd.read_csv("pdb_chain_uniprot.csv")
 pdb_human_dict = {}
 for i,j in enumerate(pdb_human['SP_PRIMARY']):
@@ -40,7 +40,7 @@ for i,j in enumerate(pdb_human['SP_PRIMARY']):
         pdb_human_dict.setdefault(j, set()).add(pdb_human.iloc[i,0].upper())
 
 
-# Add all the proteins not present in the original database which are found as other chains in the same PDB
+# Select all the proteins not present in the original database which are found as other chains in the same PDB
 new_protein = []
 for i in pdb_human_dict:
     if len(pdb_human_dict[i].intersection(mapping))>0:
@@ -49,10 +49,10 @@ for i in pdb_human_dict:
 # List of original proteins
 originals_list = original_proteins.split(" ")[:-1]
 
-# Build the PDB dataset
+# Build the PDB dataset by adding new proteins to original proteins
 PDB_dataset = (set(new_protein)).union(set(originals_list))
 
-# Save the dataset
+# Save the PDB dataset in a txt file
 with open('PDB_dataset.txt', 'w') as f:
     for item in PDB_dataset:
         f.write("%s\n" % item)
