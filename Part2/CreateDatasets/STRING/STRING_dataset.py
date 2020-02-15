@@ -2,7 +2,7 @@
 
 from Bio import SeqIO
 
-# List of STRING ids (from string website)
+# List of STRING ids (from STRING website)
 string_ids = []
 with open ('string_protein_sequences.fa') as inp:
     for line in inp:
@@ -12,7 +12,7 @@ with open ('string_protein_sequences.fa') as inp:
             print(id_string)
 
 
-# Save the dataset
+# Save the list in a txt file
 with open('String_ids.txt', 'w') as f:
     for item in string_ids:
         f.write("%s\n" % item)
